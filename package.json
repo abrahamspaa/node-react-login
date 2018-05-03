@@ -1,11 +1,19 @@
 {
+<<<<<<< HEAD
   "name": "funapp",
+=======
+  "name": "node-login",
+>>>>>>> d774b3add9cb5091b9eed44075ec7092be6d76ec
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "body-parser": "^1.18.2",
+>>>>>>> d774b3add9cb5091b9eed44075ec7092be6d76ec
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
