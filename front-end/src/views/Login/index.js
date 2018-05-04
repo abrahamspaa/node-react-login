@@ -35,21 +35,23 @@ export default class Login extends Component {
     }
 
     onLogin(event) {
-        alert('A name was submitted: ' + this.state.username);
-        event.preventDefault();
-
         fetch('login', {
             method: 'post',
             headers: {
               'Content-Type': 'application/json; charset=utf-8'
             },
             body: JSON.stringify(this.state)
-          }).then(function(response) {
-            alert(response);
-            return response.json();
-          }).then(function(data) {
-            console.log('Created Gist:', data.html_url);
+          }).then((response) =>  response.json(), )
+          .then((data) => {
+            console.log(data)
+            if (data.accessToken) {
+              console.log('Access token', data.accessToken);
+            } else {
+              console.log('Access token', data.errorMessage);
+            }
           });
+        event.preventDefault();
+
     }
 
     render() {
